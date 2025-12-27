@@ -1,0 +1,9 @@
+{
+  "appId": "app.lovable.80d85a9b3df84298b5a6a0ed0d9349da",
+  "appName": "SHG Airshow",
+  "webDir": "dist",
+  "server": {
+    "url": "https://80d85a9b-3df8-4298-b5a6-a0ed0d9349da.lovableproject.com?forceHideBadge=true",
+    "cleartext": true
+  }
+}
