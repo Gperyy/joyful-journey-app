@@ -24,12 +24,12 @@ const Index = () => {
         {/* Header */}
         <header className="relative z-10 flex items-center justify-between px-5 py-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center backdrop-blur-sm">
+            <div className="w-10 h-10 rounded-lg glass-effect flex items-center justify-center">
               <Plane className="w-5 h-5 text-primary" />
             </div>
             <span className="font-bold text-foreground text-lg">SHG Airshows</span>
           </div>
-          <button className="w-10 h-10 rounded-lg bg-secondary/50 flex items-center justify-center backdrop-blur-sm">
+          <button className="w-10 h-10 rounded-lg glass-effect flex items-center justify-center hover:bg-primary/10 transition-colors">
             <Menu className="w-5 h-5 text-foreground" />
           </button>
         </header>
@@ -53,11 +53,11 @@ const Index = () => {
 
             {/* Date & Location Tags */}
             <div className="flex flex-wrap gap-3 mt-6">
-              <div className="flex items-center gap-2 bg-secondary/60 backdrop-blur-sm px-4 py-2.5 rounded-full">
+              <div className="flex items-center gap-2 glass-effect px-4 py-2.5 rounded-full hover:glass-effect-strong transition-all">
                 <Calendar className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-foreground">19-20 Eylül 2026</span>
               </div>
-              <div className="flex items-center gap-2 bg-secondary/60 backdrop-blur-sm px-4 py-2.5 rounded-full">
+              <div className="flex items-center gap-2 glass-effect px-4 py-2.5 rounded-full hover:glass-effect-strong transition-all">
                 <MapPin className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-foreground">S.H.M.</span>
               </div>

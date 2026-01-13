@@ -6,42 +6,45 @@
 
 @layer base {
   :root {
-    --background: 220 60% 8%;
+    /* Reference app colors - Darker navy theme */
+    --background: 210 75% 8%;
     --foreground: 210 40% 98%;
 
-    --card: 220 50% 12%;
+    --card: 210 55% 20%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 220 50% 12%;
+    --popover: 210 55% 20%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 45% 18%;
+    --secondary: 210 50% 25%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 40% 20%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 215 30% 30%;
+    --muted-foreground: 215 15% 70%;
 
-    --accent: 0 84% 60%;
+    --accent: 217 91% 65%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 40% 20%;
-    --input: 220 40% 20%;
+    --border: 210 40% 25%;
+    --input: 210 40% 25%;
     --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
+    /* Custom tokens - Enhanced for reference app style */
     --live: 0 84% 60%;
-    --countdown-bg: 220 45% 15%;
+    --countdown-bg: 210 50% 18%;
     --nav-active: 217 91% 60%;
-    --gradient-hero: linear-gradient(180deg, hsl(220 60% 8% / 0.3) 0%, hsl(220 60% 8% / 0.95) 100%);
-    --shadow-card: 0 4px 20px hsl(220 60% 4% / 0.5);
+    --gradient-hero: linear-gradient(180deg, hsl(210 75% 8% / 0.2) 0%, hsl(210 75% 8% / 0.98) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(210 55% 20% / 0.8) 0%, hsl(210 55% 24% / 0.6) 100%);
+    --shadow-card: 0 4px 24px hsl(210 75% 4% / 0.6);
+    --shadow-card-hover: 0 8px 32px hsl(210 75% 4% / 0.8);
   }
 }
 
@@ -60,12 +63,51 @@
   .safe-area-bottom {
     padding-bottom: env(safe-area-inset-bottom, 20px);
   }
-  
+
   .gradient-hero {
     background: var(--gradient-hero);
   }
-  
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: hsl(var(--card) / 0.7);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .glass-effect-strong {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: hsl(var(--card) / 0.85);
+    border: 1px solid hsl(var(--primary) / 0.3);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-shadow-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
   .animate-pulse-slow {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-progress {
+    animation: progress 2s ease-in-out infinite;
+  }
+}
+
+@keyframes progress {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
   }
 }
