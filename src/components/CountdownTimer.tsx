@@ -46,13 +46,13 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
       {timeUnits.map((unit, index) => (
         <div
           key={unit.label}
-          className="flex flex-col items-center bg-countdown rounded-lg px-4 py-3 min-w-[70px] animate-fade-in"
+          className="flex flex-col items-center glass-effect-strong rounded-xl px-4 py-4 min-w-[75px] animate-fade-in card-shadow hover:card-shadow-hover transition-all"
           style={{ animationDelay: `${index * 100}ms` }}
         >
-          <span className="text-2xl font-bold text-foreground tabular-nums">
+          <span className="text-3xl font-extrabold text-foreground tabular-nums">
             {String(unit.value).padStart(2, "0")}
           </span>
-          <span className="text-[10px] text-muted-foreground font-medium tracking-wider">
+          <span className="text-[10px] text-muted-foreground font-semibold tracking-widest mt-1">
             {unit.label}
           </span>
         </div>
